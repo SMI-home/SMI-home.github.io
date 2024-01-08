@@ -102,4 +102,6 @@ theme: tranquility
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/SMI-home/SMI-home.git
+  branch: master
