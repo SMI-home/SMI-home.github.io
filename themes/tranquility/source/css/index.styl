@@ -24,15 +24,22 @@ for item in hexo-config('timeline.items') {
   left: 0;
   right: 0;
   bottom: 0;
+  width: 100%;
+  background-color: rgba(8 ,34, 55 , 95%);
+  /*background-image: url(/images/xingkong.png);*/
+  /*background-size: cover; /* 覆盖整个元素 */
+  /*background-repeat: no-repeat; /* 不重复图片 */
+  /*background-position: center center; /* 居中显示 */ */
+  opacity: 0.5;
 }
 
-.wall-bg::before {
+/*.wall-bg::before {
   @extend .wall-bg;
   z-index: 2;
   content: ' ';
   background-color: rgba(255, 255, 255, 0.95);
   transition: background-color 200ms ease-in;
-}
+}*/
 
 .wall-main:hover+.wall-bg::before {
   background-color: rgba(255, 255, 255, 0.8);
@@ -48,43 +55,88 @@ for item in hexo-config('timeline.items') {
   text-align: center;
   margin-top: -20vh;
   z-index: 3;
+  display: grid;
+  grid-template-rows: auto auto; /* 设置两行，第一行为自动高度，第二行为自动高度 */
+  grid-template-columns: 30% 1; /* 设置两列，每列等分剩余空间 */
+  align-items: center; /* 在交叉轴上居中 */
+  justify-content: center; /* 在主轴上居中 */
+  gap: 10px; /* 设置行之间的间隙 */
+  margin-top: -50px;
 }
 
 .wall-title {
   font-weight: 600;
-  font-size: 72px;
+  font-size: 120px;
   animation: flyIn 500ms ease-out;
+  color: #FF9900;
+  grid-row: 1; /* 放在第一行 */
+  grid-column: 2; /* 放在第一列 */
+  justify-self: start; /* 元素向左对齐 */
 }
 
-.wall-subtitle {
+.wall-logo-image{
+  height:150px;
+  width :150px;
+  grid-row: 1; /* 放在第一行 */
+  grid-column: 1; /* 放在第一列 */
+  justify-self: end; /* 元素向右对齐 */
+  }
+
+.wall-description {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 10px 0;
+  letter-spacing: 0.2em;
+  color: #FF9900;
+  grid-row: 2; /* 放在第二行 */
+  grid-column: span 2; /* 横跨两列 */
+}
+
+/*.wall-subtitle {
   font-size: 36px;
   font-weight: bold;
   margin-top: 10px;
+  grid-area: subtitle; /* 将副标题放置在定义的subtitle区域 
+}*/
+
+.wall-picture-combination{
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-gap: 10px;
+  background-color: black;
 }
 
-.wall-description {
-  font-size: 20px;
-  font-weight: 400;
-  margin: 10px 0;
-  font-family: sourceHanSerif;
-  letter-spacing: 0.2em;
-}
+.wall-picture-combination img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  }
+
 
 #heart-curve {
   position: absolute;
   right: 0;
   top: 50%;
   margin-top: -200px;
+  opacity: 0.3;
 }
 
 .hello-world {
   position: absolute;
-  top: calc(50% - 80px);
-  right: calc(50% + 230px);
+  top: calc(50% - 150px);
+  right: calc(50% + 430px);
   font-size: 30px;
   display: flex;
   align-items: flex-end;
   width: 220px;
+  color rgb(255, 255, 255);
+  opacity: 0.3;
+}
+
+@keyframes type {
+  0% { width: 0; }
+  100% { width: 100%; }
 }
 
 .hello-world .cursor {
@@ -114,17 +166,18 @@ for item in hexo-config('timeline.items') {
 .normal-eqt {
   position: absolute;
   top: calc(50% + 100px);
-  right: 50%;
-  opacity: 0.8;
+  right: 65%;
+  opacity: 0.3;
 }
 
 .motto {
   font-size: 28px;
-  font-weight: bold;
-  right: 0;
+  right: 25%;
+  top: 15%;
   bottom: calc(50% - 200px);
   position: absolute;
   opacity: 0.3;
+  color rgb(255, 255, 255);
 }
 
 .poem {
@@ -132,8 +185,9 @@ for item in hexo-config('timeline.items') {
   position: absolute;
   font-family: sourceHanSerif;
   left: 50%;
-  top: calc(50% + 80px);
-  opacity: 0.2;
+  top: calc(50% + 180px);
+  opacity: 0.3;
+  color rgb(255, 255, 255);
 }
 
 @keyframes flyIn {
@@ -504,12 +558,14 @@ for v, k in timeline_colors {
     top: 60%;
     right: 10%;
     width: 300px;
+    opacity: 0.3;
   }
 
   .normal-eqt {
     bottom: 14%;
     left: 40%;
     top: auto;
+    opacity: 0.3
 
     img {
       width: 200px;

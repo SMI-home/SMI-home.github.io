@@ -66,20 +66,16 @@
     <div class="head">
       <div class="nav">
         <a href='{{ url_for("/") }}' class="nav-logo">
-          <img alt="logo" height="60px" width="60px" src="{{ url_for(theme.logo) }}"/>
+          <!--<img alt="logo" height="60px" width="60px" src="{{ url_for(theme.logo) }}"/>-->
+          首页
         </a>
         <input id="navBtn" type="checkbox"/>
         <div class="nav-menu">
           {% if theme.subpage.enable %}
             {% for nav in theme.subpage.pages %}
-              <a class="nav-menu-item" href="{{ url_for(nav.path or nav.name) }}">{{ nav.title }}</a>
+                  <a href="{{ url_for(nav.path or nav.name) }}" class="nav-menu-item">{{ nav.title }}</a>
             {% endfor %}
-              <a class="nav-menu-item-sign" href="https://ourspark.feel.ac.cn/index">报名入口</a>
-          {% else %}
-            <a class="nav-menu-item" href='{{ url_for("/blog/") }}'>博客</a>
-          {% endif %}
-          {% if theme.cv.enable and theme.cv.showInNav %}
-            <a class="nav-menu-item" href='{{ url_for("/cv/") }}'>简历</a>
+              <a class="nav-menu-item-sign" href="https://ourspark.feel.ac.cn/index">作品提交</a>
           {% endif %}
         </div>
         <label class="nav-btn" for="navBtn"></label>
