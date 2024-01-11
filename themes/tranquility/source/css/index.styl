@@ -26,20 +26,8 @@ for item in hexo-config('timeline.items') {
   bottom: 0;
   width: 100%;
   background-color: rgba(8 ,34, 55 , 95%);
-  /*background-image: url(/images/xingkong.png);*/
-  /*background-size: cover; /* 覆盖整个元素 */
-  /*background-repeat: no-repeat; /* 不重复图片 */
-  /*background-position: center center; /* 居中显示 */ */
   opacity: 0.5;
 }
-
-/*.wall-bg::before {
-  @extend .wall-bg;
-  z-index: 2;
-  content: ' ';
-  background-color: rgba(255, 255, 255, 0.95);
-  transition: background-color 200ms ease-in;
-}*/
 
 .wall-main:hover+.wall-bg::before {
   background-color: rgba(255, 255, 255, 0.8);
@@ -92,12 +80,6 @@ for item in hexo-config('timeline.items') {
   grid-column: span 2; /* 横跨两列 */
 }
 
-/*.wall-subtitle {
-  font-size: 36px;
-  font-weight: bold;
-  margin-top: 10px;
-  grid-area: subtitle; /* 将副标题放置在定义的subtitle区域 
-}*/
 
 .wall-picture-combination{
   position: absolute;
