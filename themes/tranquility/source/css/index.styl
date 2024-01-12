@@ -186,9 +186,12 @@ for item in hexo-config('timeline.items') {
 
 .about {
   max-width: 900px;
-  margin: 200px auto;
-  display: flex;
+  margin: 400px 600px 200px auto;
+  display: grid;
+  grid-template-columns: 30% 70%;
   justify-content: space-between;
+  grid-gap: 100px;
+  grid-template-rows: 1% 99%;
 }
 
 .about-photo {
@@ -197,7 +200,7 @@ for item in hexo-config('timeline.items') {
   background: url('') center center / cover no-repeat;
   margin: 0 10px;
   transition: all 200ms ease-out;
-
+  grid-row: 2; 
   &:hover {
     box-shadow: 0 0 14px 0 $anchor-border;
     transform: translateY(-4px);
@@ -207,6 +210,7 @@ for item in hexo-config('timeline.items') {
 .about-text {
   font-weight: bold;
   font-family: sourceHanSerif;
+  grid-column: 2; 
 }
 
 .about-title {
@@ -224,10 +228,12 @@ for item in hexo-config('timeline.items') {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: "Arial", sans-serif;
 }
 
 .about-text-p {
   padding: 20px 10px;
+  width: 800px;
 }
 
 .timeline {

@@ -1,4 +1,4 @@
-slogan: “播种工程想象力，为人类发展提供持续的前瞻概念探索”
+slogan: “播种工程想象力，为全人类发展提供持续的前瞻概念探索”
 email: smi_fiction2024@126.com
 logo: "/images/logo.svg"
 
@@ -13,26 +13,26 @@ favicon: # 配置网页图标
 subpage: # 开启“子页”功能，详见 README
   enable: true
   pages:
-    - name: news # 文章的分类（category）名，如 developer
-      path: news # 若不设置则默认使用 name
-      title: 最新消息 # 菜单名，如 开发者
+    - name: play_news # 文章的分类（category）名，如 developer
+      path: play_news # 若不设置则默认使用 name
+      title: 赛事信息 # 菜单名，如 开发者
       icon: /images/icon/icon-code.svg # 图标的路径
-      description: 最新消息 # 描述
-    - name: baseTest # 文章的分类（category）名，如 developer
-      path: base # 若不设置则默认使用 name
-      title: 基础测试 # 菜单名，如 开发者
+      description: 赛事信息 # 描述
+    - name: project # 文章的分类（category）名，如 developer
+      path: project # 若不设置则默认使用 name
+      title: 项目 # 菜单名，如 开发者
       icon: /images/icon/icon-pi.svg # 图标的路径
-      description: 基于 hexo 官方的基础测试 # 描述
+      description: project # 描述
 
 index: # 配置首页个性化内容
   motto: ">工程科幻创作"
   poem:
     - />宇宙信息学
-  photo: /images/about.jpg
+  photo: /images/about.PNG
   about:
     title: 关于更多想象空间
     text:
-      - 更多想象空间介绍
+      - 更多想象空间的发展最早可追溯到2015年龙马创客部落，近年来我社在北京邮电大学校内展开了工程科幻创客马拉松，概念探索等大量活动。社团的宗旨是播种工程想象力，为全人类发展提供持续的前瞻概念探索！社团的使命是让每个人都能拥有一次属于自己的工程科幻畅想和创作机会，看到自己的思维。让工程想象力点燃内心的火焰，照亮人生，照亮人类社会与整个世界持续发展的道路。社团的愿景是发展面向未来的工程思维，使社团成为工程师创新灵感的采集地和激发地，成为工程科幻者的交流、沟通、思维碰撞的思想乌托邦。更多想象空间欢迎您的加入！
       -
       - 
       -
@@ -43,25 +43,18 @@ photos:
 
 foot:
   title:
-    - "放置slogan"
-    - "slogan"
+    - "播种工程想象力，为全人类发展提供持续的前瞻概念探索"
 
 links: # 朋友
-  - name: "Theme Tranquility"
-    url: https://github.com/hooozen/hexo-theme-tranquility
-  - name: "浩然的主页"
-    url: https://hozen.site
+  - name: "涅槃之路"
+    url: https://oauth.feel.ac.cn/
+  - name: "火花空间"
+    url: https://www.oursparkspace.cn/
 
 social:
-  - name: "hooozen"
-    icon: "/images/logo-github.svg"
-    url: https://github.com/hooozen
-  - name: "谁在胡言乱语"
-    icon: "/images/logo-wx.svg"
-    url: https://mp.weixin.qq.com/s?__biz=MzI3NzQ4NDkzNg==&mid=2247484469&idx=1&sn=8a442bb67397f52cce5c38c3f9b41e36&chksm=eb64c0d2dc1349c40d2e1bb55615ae28b3f2951be22f00717b9ade98c851082e42dc666ab45d#rd
-  - name: "Mundooo"
+  - name: "木围"
     icon: "/images/logo-zh.svg"
-    url: https://www.zhihu.com/people/hozen
+    url: https://www.zhihu.com/people/wang-yu-99-65-34
 
 reward: # 赞赏
   enable: false
@@ -130,7 +123,7 @@ timeline:
     - name: activate
       color: "#60a465"
       icon: /images/icon/icon-app.svg
-      checked: true
+      checked: false
     - name: event
       color: "#568dc4"
       icon: /images/icon/icon-event.svg
