@@ -48,6 +48,24 @@
       </div>
     </div>
   </div>
+  {# <div class="data-show">
+    <div class="data-show-item">
+      <div>当前人数</div>
+      <div class="timer data-count-title" id="count-number" data-to="300" data-speed="1500"></div>
+    </div>
+    <div class="data-show-item">
+      <div>当前人数</div>
+      <div class="timer data-count-title" id="count-number" data-to="300" data-speed="1500"></div>
+    </div>
+    <div class="data-show-item">
+      <div>当前人数</div>
+      <div class="timer data-count-title" id="count-number" data-to="300" data-speed="1500"></div>
+    </div>
+    <div class="data-show-item">
+      <div>当前人数</div>
+      <div class="timer data-count-title" id="count-number" data-to="300" data-speed="1500"></div>
+    </div>
+  </div> #}
   <div class="about">
     <div class="about-photo"
          style="background-image: url({{ url_for(theme.index.photo) }})"></div>
@@ -100,6 +118,7 @@
 {% endblock body %}
 {% block script %}
   {% include "_partials/scripts/HeartCurve.njk" %}
+  {% include "_partials/scripts/NumberRoll.njk" %}
   {% from "_partials/scripts/Timeline.njk" import timeline %}
   {% if theme.timeline and theme.timeline.enable %}{{ timeline(site.timelineData) }}
   {% endif %}

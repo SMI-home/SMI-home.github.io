@@ -16,13 +16,18 @@ subpage: # 开启“子页”功能，详见 README
     - name: play_news # 文章的分类（category）名，如 developer
       path: play_news # 若不设置则默认使用 name
       title: 赛事信息 # 菜单名，如 开发者
-      icon: /images/icon/icon-code.svg # 图标的路径
-      description: 赛事信息 # 描述
+      icon:  # 图标的路径
+      description: 本页面将会介绍赛事最新信息，欢迎大家报名。 # 描述
     - name: project # 文章的分类（category）名，如 developer
       path: project # 若不设置则默认使用 name
       title: 项目 # 菜单名，如 开发者
-      icon: /images/icon/icon-pi.svg # 图标的路径
-      description: project # 描述
+      icon:  # 图标的路径
+      description: 本页面将会介绍我们所推广到各个学校的项目。 # 描述
+    - name: Life_trajectory # 文章的分类（category）名，如 developer
+      path: Life_trajectory # 若不设置则默认使用 name
+      title: 空间历史 # 菜单名，如 开发者
+      icon:  # 图标的路径
+      description: 本页面将会介绍更多想象空间历史上的各项重要时刻。 # 描述
 
 index: # 配置首页个性化内容
   motto: ">工程科幻创作"
@@ -116,18 +121,18 @@ timeline:
   enable: true
   order: false # 是否按时间正序展示，false 为倒序
   items:
-    - name: event
+    - name: play_news
       color: "#ee936c"
       icon: /images/icon/icon-article.svg
       checked: false
-    - name: activate
+    - name: project
       color: "#60a465"
       icon: /images/icon/icon-app.svg
       checked: false
-    - name: event
+    - name: Life_trajectory
       color: "#568dc4"
       icon: /images/icon/icon-event.svg
-      checked: false
+      checked: true
 
 # 标签云
 tagcloud:
